@@ -1,0 +1,23 @@
+name: Shashi site CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Run 1 line script
+      run : echo my FIrst 1 liner Action
+      
+    - name : Run multi Liner script
+      run : |
+            echo first Multi liner
+            echo Second multi liner
